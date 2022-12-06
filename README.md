@@ -29,3 +29,9 @@ Skip TLS for agent:
 ```bash
 yq e '.insecureSkipProxyTLSVerify = true' -i prod-cluster-values.yaml
 ```
+
+---
+
+Download tsh client
+
+https://goteleport.com/docs/installation/#macos

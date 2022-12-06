@@ -27,13 +27,32 @@ kubectl -n teleport-cluster exec -it -c teleport \
   -- tctl users add admin --roles=editor,access --logins=root,ubuntu,ec2-user
 ```
 
+Create a user and group:
+```bash
+tctl create -f << EOF
+kind: role
+metadata:
+  name: kube-access
+version: v5
+spec:
+  allow:
+    kubernetes_labels:
+      '*': '*'
+    kubernetes_groups:
+    - k8s-group
+    kubernetes_users:
+    - admin
+  deny: {}
+EOF
+```
+
 Create Teleport Role:
 ```bash
 kubectl apply -f - << EOF
 apiVersion: resources.teleport.dev/v5
 kind: TeleportRole
 metadata:
-  name: myrole
+  name: admin-role
   namespace: teleport-cluster
 spec:
   allow:
@@ -49,10 +68,10 @@ kubectl apply -f - << EOF
 apiVersion: resources.teleport.dev/v2
 kind: TeleportUser
 metadata:
-  name: myuser
+  name: admin
   namespace: teleport-cluster
 spec:
-  roles: ['myrole']
+  roles: ['admin-role']
 EOF
 ```
 
