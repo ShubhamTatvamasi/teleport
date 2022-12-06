@@ -22,3 +22,10 @@ Create an admin user:
 ```bash
 docker exec teleport tctl users add admin --roles=editor,access --logins=root,ubuntu,ec2-user
 ```
+
+---
+
+Skip TLS for agent:
+```bash
+yq e '.insecureSkipProxyTLSVerify = true' -i prod-cluster-values.yaml
+```
