@@ -4,6 +4,7 @@ services:
     image: public.ecr.aws/gravitational/teleport:11
     container_name: teleport
     hostname: 192.168.4.51
+    entrypoint: /bin/sh
     command: -c "/usr/bin/dumb-init teleport start -d -c /etc/teleport.d/teleport.yaml --insecure"
     ports:
       - "3023:3023"
