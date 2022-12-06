@@ -1,15 +1,5 @@
 # kubernetes
 
-Client cleanup:
-```bash
-rm -rf ~/.tsh
-```
-
-Client cli login:
-```bash
-tsh login --proxy=teleport.shubhamtatvamasi.com --user=admin --insecure
-```
-
 https://teleport.shubhamtatvamasi.com
 
 Create a user and group:
