@@ -30,6 +30,10 @@ ssh_service:
   - name: hostname
     command: [hostname]
     period: 1m0s
+kubernetes_service:
+  enabled: "yes"
+  listen_addr: 0.0.0.0:3027
+  kube_cluster_name: teleport.shubhamtatvamasi.com
 proxy_service:
   enabled: "yes"
   web_listen_addr: 0.0.0.0:443
