@@ -15,3 +15,22 @@ SSH into the Teleport Server.
 tsh ssh root@teleport.shubhamtatvamasi.com
 ```
 > This will use port `3022` to SSH into the container.
+
+---
+
+### kubernetes
+
+List clusters:
+```bash
+tsh kube ls
+```
+
+login into a cluster:
+```bash
+tsh kube login cks
+```
+
+Test your connection:
+```bash
+kubectl get pods
+```
