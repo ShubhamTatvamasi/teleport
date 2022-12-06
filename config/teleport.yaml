@@ -33,6 +33,8 @@ ssh_service:
 proxy_service:
   enabled: "yes"
   web_listen_addr: 0.0.0.0:443
+  listen_addr: 0.0.0.0:3023
+  tunnel_listen_addr: 0.0.0.0:3024
   public_addr: teleport.shubhamtatvamasi.com:443
   https_keypairs: []
   acme:
