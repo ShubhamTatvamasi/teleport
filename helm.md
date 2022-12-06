@@ -27,6 +27,27 @@ kubectl -n teleport-cluster exec -it -c teleport \
   -- tctl users add admin --roles=editor,access --logins=root,ubuntu,ec2-user
 ```
 
+Group: admins
+User: kube-admin-local
+
+Create an admin role binding:
+```bash
+kubectl apply -f - << EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admins-crb
+subjects:
+- kind: Group
+  name: admins
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
 Create a user and group:
 ```bash
 tctl create -f << EOF
