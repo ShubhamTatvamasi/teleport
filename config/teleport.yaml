@@ -6,8 +6,6 @@ teleport:
     severity: INFO
     format:
       output: text
-  ca_pin: ""
-  diag_addr: ""
 auth_service:
   enabled: "yes"
   listen_addr: 0.0.0.0:3025
@@ -30,7 +28,9 @@ proxy_service:
   tunnel_listen_addr: 0.0.0.0:3024
   kube_listen_addr: 0.0.0.0:3026
   public_addr: teleport.shubhamtatvamasi.com:443
-  https_keypairs: []
-  acme:
-    enabled: "yes"
-    email: shubhamtatvamasi@gmail.com
+  https_keypairs:
+    - key_file: /var/lib/teleport/key.pem
+      cert_file: /var/lib/teleport/cert.pem
+  # acme:
+  #   enabled: "yes"
+  #   email: shubhamtatvamasi@gmail.com

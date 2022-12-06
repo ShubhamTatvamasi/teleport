@@ -1,5 +1,10 @@
 # teleport
 
+Create a teleport directory and place your `key.pem` and `cert.pem` in it:
+```bash
+mkdir -p teleport
+```
+
 Start teleport server:
 ```bash
 docker-compose up -d

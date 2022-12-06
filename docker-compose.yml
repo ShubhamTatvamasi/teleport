@@ -13,7 +13,4 @@ services:
       - "443:443" # teleport Dashboard
     volumes:
       - ./config:/etc/teleport
-      - teleport_data:/var/lib/teleport
-
-volumes:
-  teleport_data:
+      - ./teleport:/var/lib/teleport
