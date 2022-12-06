@@ -34,4 +34,3 @@ docker run --hostname localhost --rm \
   -v ~/teleport/config:/etc/teleport \
   public.ecr.aws/gravitational/teleport:11 -c "teleport configure > /etc/teleport/teleport.yaml"
 ```
-
