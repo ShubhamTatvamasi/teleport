@@ -1,5 +1,10 @@
 # Config Generator
 
+Start a teleport container:
+```bash
+docker run --rm -it --entrypoint bash public.ecr.aws/gravitational/teleport:11
+```
+
 teleport config flags:
 ```bash
 teleport configure --help
