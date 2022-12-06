@@ -1,10 +1,3 @@
-#
-# A Sample Teleport configuration file.
-#
-# Things to update:
-#  1. license.pem: You only need a license from https://dashboard.goteleport.com
-#     if you are an Enterprise customer.
-#
 version: v3
 teleport:
   data_dir: /var/lib/teleport
