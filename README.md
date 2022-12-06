@@ -10,11 +10,9 @@ Create an admin user:
 docker exec teleport tctl users add admin --roles=editor,access --logins=root,ubuntu,ec2-user
 ```
 
----
-
-Skip TLS for agent:
+Uninstall:
 ```bash
-yq e '.insecureSkipProxyTLSVerify = true' -i prod-cluster-values.yaml
+docker-compose down -v
 ```
 
 ---

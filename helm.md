@@ -101,3 +101,11 @@ Uninstall:
 helm un teleport-cluster -n teleport-cluster
 kubectl delete ns teleport-cluster
 ```
+
+
+---
+
+Skip TLS for agent:
+```bash
+yq e '.insecureSkipProxyTLSVerify = true' -i prod-cluster-values.yaml
+```
