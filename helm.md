@@ -96,12 +96,17 @@ spec:
 EOF
 ```
 
-Uninstall:
+Uninstall server:
 ```bash
 helm un teleport-cluster -n teleport-cluster
 kubectl delete ns teleport-cluster
 ```
 
+Uninstall agent:
+```bash
+helm un teleport-agent -n teleport
+kubectl delete ns teleport
+```
 
 ---
 
