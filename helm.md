@@ -60,9 +60,9 @@ spec:
     kubernetes_labels:
       '*': '*'
     kubernetes_groups:
-    - k8s-group
+    - '*'
     kubernetes_users:
-    - admin
+    - '*'
   deny: {}
 EOF
 ```

@@ -3,13 +3,13 @@ services:
   teleport:
     image: public.ecr.aws/gravitational/teleport:11
     container_name: teleport
-    hostname: "192.168.4.51"
-    command:
-      - --insecure
     ports:
       - "3023:3023"
       - "3025:3025"
-      - "3080:3080"
+      - "443:443" # teleport Dashboard
     volumes:
       - ./config:/etc/teleport
-      - ./data:/var/lib/teleport
+      - teleport_data:/var/lib/teleport
+
+volumes:
+  teleport_data:
