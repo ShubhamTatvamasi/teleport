@@ -34,3 +34,24 @@ Test your connection:
 ```bash
 kubectl get pods
 ```
+
+---
+
+### mysql
+
+List databases:
+```bash
+tsh db ls
+```
+
+login into database:
+```bash
+tsh db login mysql
+```
+
+Connecti to mysql server:
+```bash
+tsh db connect --db-user=root mysql
+```
+
+
