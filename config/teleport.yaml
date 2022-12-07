@@ -27,6 +27,7 @@ proxy_service:
   listen_addr: 0.0.0.0:3023
   tunnel_listen_addr: 0.0.0.0:3024
   kube_listen_addr: 0.0.0.0:3026
+  mysql_listen_addr: 0.0.0.0:3036
   public_addr: teleport.shubhamtatvamasi.com:443
   https_keypairs:
     - key_file: /var/lib/teleport/key.pem

@@ -9,7 +9,8 @@ services:
       - "3023:3023" # authenticate with proxy
       - "3024:3024" # authenticate listening address
       - "3025:3025" # authentication service
-      - "3026:3026" # kubernetes proxy service
+      - "3026:3026" # kubernetes service
+      - "3036:3036" # mysql service
       - "443:443" # teleport Dashboard
     volumes:
       - ./config:/etc/teleport
