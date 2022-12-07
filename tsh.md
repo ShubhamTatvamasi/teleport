@@ -46,12 +46,10 @@ tsh db ls
 
 login into database:
 ```bash
-tsh db login mysql
+tsh db login --db-user=root --db-name=mysql mysql
 ```
 
 Connecti to mysql server:
 ```bash
-tsh db connect --db-user=root mysql
+tsh db connect --db-user=root --db-name=mysql mysql
 ```
-
-
