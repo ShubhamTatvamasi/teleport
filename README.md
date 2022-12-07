@@ -7,7 +7,7 @@ mkdir -p teleport
 
 Start teleport server:
 ```bash
-docker-compose up -d
+docker-compose up -d --force-recreate
 ```
 
 Create an admin user:
