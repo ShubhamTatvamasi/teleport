@@ -22,6 +22,16 @@ docker-compose down -v
 
 ---
 
+### DNS
+
+Update DNS for:
+```
+yourdomain.com
+*.yourdomain.com
+```
+
+---
+
 Download tsh client
 
 https://goteleport.com/docs/installation/#macos
