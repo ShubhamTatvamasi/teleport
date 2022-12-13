@@ -1,0 +1,9 @@
+kind: role
+version: v4
+metadata:
+  name: k8s_members
+spec:
+  allow:
+    kubernetes_groups: ["system:masters"]
+    kubernetes_labels:
+      '*': '*'
