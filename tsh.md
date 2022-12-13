@@ -1,5 +1,7 @@
 # tsh
 
+https://goteleport.com/docs/installation/
+
 Client cleanup:
 ```bash
 rm -rf ~/.tsh
