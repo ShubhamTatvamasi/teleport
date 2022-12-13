@@ -7,6 +7,11 @@ Client cleanup:
 rm -rf ~/.tsh
 ```
 
+Login for 30 hours:
+```bash
+tsh login --ttl 1800
+```
+
 Client cli login:
 ```bash
 tsh login --proxy=teleport.shubhamtatvamasi.com --user=admin --insecure
