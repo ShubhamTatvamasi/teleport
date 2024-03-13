@@ -47,6 +47,11 @@ Test your connection:
 kubectl get pods
 ```
 
+Login to all clusters:
+```bash
+tsh kube login --all
+```
+
 ---
 
 ### mysql
