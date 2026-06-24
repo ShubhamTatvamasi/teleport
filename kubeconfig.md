@@ -21,5 +21,30 @@ export KUBECONFIG=~/.kube/config.bak:~/.kube/teleport-kubeconfig.yaml
 kubectl config view --merge --flatten > ~/.kube/config
 ```
 
+```yaml
+kubectl apply -f - << EOF
+kind: role
+version: v7
+metadata:
+  name: kube-access
+spec:
+  allow:
+    kubernetes_labels:
+      '*': '*'
+
+    kubernetes_groups:
+      - system:masters
+
+    kubernetes_users:
+      - admin
+
+    logins:
+      - root
+
+    node_labels:
+      '*': '*'
+EOF
+```
+
 
 
