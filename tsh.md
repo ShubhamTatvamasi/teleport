@@ -4,7 +4,7 @@ https://goteleport.com/docs/installation/
 
 Install tsh
 ```bash
-brew install --cask tsh
+brew install --cask teleport-suite
 ```
 
 Client cleanup:
