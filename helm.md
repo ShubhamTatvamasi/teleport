@@ -20,6 +20,18 @@ helm install teleport-cluster teleport/teleport-cluster \
   --version 11.1.1
 ```
 
+
+Create an invite link for signup:
+```bash
+kubectl -n teleport \
+  exec -it deploy/teleport-auth -- \
+  tctl users add admin --roles=editor,access,auditor
+```
+> User "admin" has been created but requires a password. Share this URL with the user to complete user setup, link is valid for 1h:
+
+---
+
+
 Uninstall server:
 ```bash
 helm un teleport-cluster -n teleport-cluster
