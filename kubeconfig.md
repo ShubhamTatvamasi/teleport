@@ -43,7 +43,8 @@ EOF
 ```bash
 kubectl -n teleport \
   exec -it deploy/teleport-auth -- \
-  tctl users update admin --set-roles=editor,access,auditor,kube-admin
+  tctl users update admin \
+  --set-roles=editor,access,auditor,kube-admin
 ```
 
 
