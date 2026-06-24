@@ -2,6 +2,11 @@
 
 https://goteleport.com/docs/installation/
 
+Install tsh
+```bash
+brew install --cask tsh
+```
+
 Client cleanup:
 ```bash
 rm -rf ~/.tsh
