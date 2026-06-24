@@ -23,26 +23,18 @@ kubectl config view --merge --flatten > ~/.kube/config
 
 ```yaml
 kubectl apply -f - << EOF
-kind: role
-version: v7
+apiVersion: resources.teleport.dev/v5
+kind: TeleportRole
 metadata:
   name: kube-access
 spec:
   allow:
-    kubernetes_labels:
-      '*': '*'
-
-    kubernetes_groups:
+    kubernetesLabels:
+      "*": "*"
+    kubernetesGroups:
       - system:masters
-
-    kubernetes_users:
+    kubernetesUsers:
       - admin
-
-    logins:
-      - root
-
-    node_labels:
-      '*': '*'
 EOF
 ```
 
