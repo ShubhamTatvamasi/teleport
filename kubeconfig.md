@@ -26,14 +26,15 @@ kubectl apply -f - << EOF
 apiVersion: resources.teleport.dev/v5
 kind: TeleportRole
 metadata:
-  name: kube-access
+  name: kube-admin
+  namespace: teleport
 spec:
   allow:
-    kubernetesLabels:
+    kubernetes_labels:
       "*": "*"
-    kubernetesGroups:
+    kubernetes_groups:
       - system:masters
-    kubernetesUsers:
+    kubernetes_users:
       - admin
 EOF
 ```
