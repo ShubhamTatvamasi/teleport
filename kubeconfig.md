@@ -23,19 +23,25 @@ kubectl config view --merge --flatten > ~/.kube/config
 
 ```yaml
 kubectl apply -f - << EOF
-apiVersion: resources.teleport.dev/v5
+apiVersion: resources.teleport.dev/v6
 kind: TeleportRole
 metadata:
   name: kube-admin
   namespace: teleport
 spec:
   allow:
-    kubernetes_labels:
-      "*": "*"
     kubernetes_groups:
-      - system:masters
+    - system:masters
+    kubernetes_labels:
+      '*': '*'
     kubernetes_users:
-      - admin
+    - admin
+    kubernetes_resources:
+    - kind: pod
+      name: '*'
+      namespace: '*'
+      verbs:
+      - '*'
 EOF
 ```
 
