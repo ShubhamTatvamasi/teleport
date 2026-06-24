@@ -40,4 +40,23 @@ EOF
 ```
 
 
+```bash
+kubectl -n teleport \
+  exec -it deploy/teleport-auth -- \
+  tctl users update admin --set-roles=editor,access,auditor,kube-admin
+```
+
+
+```
+tsh logout
+```
+
+```
+tsh login --proxy=teleport.k9s.shubhamtatvamasi.com:443 --auth=local --user=admin teleport.k9s.shubhamtatvamasi.com
+```
+
+```
+tsh kube login teleport.k9s.shubhamtatvamasi.com
+```
+
 
