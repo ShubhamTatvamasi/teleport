@@ -1,6 +1,6 @@
 # helm
 
-https://goteleport.com/docs/management/guides/teleport-operator/
+https://goteleport.com/docs/configuration/teleport-operator/teleport-operator-helm/
 
 Add the helm repo:
 ```bash
