@@ -52,7 +52,11 @@ tsh logout
 ```
 
 ```
-tsh login --proxy=teleport.k9s.shubhamtatvamasi.com:443 --auth=local --user=admin teleport.k9s.shubhamtatvamasi.com
+tsh login \
+  --proxy=teleport.k9s.shubhamtatvamasi.com:443 \
+  --auth=local \
+  --user=admin \
+  teleport.k9s.shubhamtatvamasi.com
 ```
 
 ```
