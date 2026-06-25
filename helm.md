@@ -25,7 +25,7 @@ Create an invite link for signup:
 ```bash
 kubectl -n teleport \
   exec -it deploy/teleport-auth -- \
-  tctl users add admin --roles=editor,access,auditor
+  tctl users add admin --roles=editor,access,auditor,kube-admin
 ```
 > User "admin" has been created but requires a password. Share this URL with the user to complete user setup, link is valid for 1h:
 
