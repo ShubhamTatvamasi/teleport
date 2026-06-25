@@ -10,7 +10,7 @@ helm repo update
 
 Install teleport operator:
 ```bash
-helm install teleport-cluster teleport/teleport-cluster \
+helm upgrade -i teleport-cluster teleport/teleport-cluster \
   --create-namespace \
   --namespace teleport-cluster \
   --set clusterName=k8s.shubhamtatvamasi.com \
